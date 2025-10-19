@@ -1,6 +1,5 @@
 #include "common.h"
 #include <cctype>
-
 #ifdef _WIN32
 #include <io.h>
 #include <windows.h>
@@ -9,9 +8,8 @@
 #endif
 
 int readString(int fd, std::string &line) {
-    char symbol = ' ';
+    char symbol;
     line.clear();
-    
     while (true) {
         int res;
 #ifdef _WIN32
@@ -19,7 +17,6 @@ int readString(int fd, std::string &line) {
 #else
         res = read(fd, &symbol, sizeof(char));
 #endif
-
         if (res <= 0) {
             return EOF;
         }
