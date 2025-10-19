@@ -3,11 +3,10 @@
 
 #include <string>
 
-const std::string _USER_ALERT_VALID_OUT = "VALID: String starts with uppercase letter\n";
-const std::string _USER_ALERT_INVALID_OUT = "INVALID: String does not start with uppercase letter\n";
-const std::string _USER_ALERT_FILE_INPUT = "Enter filename for logging: ";
-const std::string _USER_ALERT_STRING_INPUT = "Enter a string (Ctrl+D/Ctrl+Z to exit): ";
-const std::string _USER_ALERT_ERROR_FILE = "Error opening file\n";
+const std::string INVALID_STRING = "Error: string does not start with uppercase letter\n";
+const std::string FILE_INPUT = "Enter filename: ";
+const std::string STRING_INPUT = "Enter a string: ";
+const std::string FILE_ERROR = "Error opening file\n";
 
 const int RD = 0;
 const int WR = 1;
