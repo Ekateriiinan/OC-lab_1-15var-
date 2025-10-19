@@ -1,5 +1,4 @@
 #include <string>
-
 #ifdef _WIN32
 #include <io.h>
 #include <windows.h>
@@ -17,10 +16,9 @@ int main() {
     
     while (readString(STDIN_FILENO, stringLine) != EOF) {
         if (startsWithUppercase(stringLine)) {
-            writeString(STDERR_FILENO, stringLine + "\n");
-            writeString(STDOUT_FILENO, _USER_ALERT_VALID_OUT);
+            writeString(STDOUT_FILENO, stringLine + "\n");  
         } else {
-            writeString(STDOUT_FILENO, _USER_ALERT_INVALID_OUT);
+            writeString(STDERR_FILENO, INVALID_STRING);   
         }
         stringLine.clear();
     }
